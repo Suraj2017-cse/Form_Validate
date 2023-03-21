@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --text-color: #CD5C5C;
+    --primary-text: #F3FFEF;
+    --inner-text: #FAD7A0;
+    --bg-color:#FAD7A0;
+    --bg2-color:#BA4A00;
+    --hover-color:#7DCEA0;
+    --regular-font:  'Teko', sans-serif ;
+    --main-font: 'Quicksand', sans-serif;
+    --padding: 1rem;
+    --padding2: 1.5rem;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* **********Header********* */
+header{
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+header nav {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+header ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+
+}
+header ul li{
+    list-style: none;
+    padding: var(--padding);
+    cursor: pointer;
+    transition: all .9s ease-in-out;
+    color: var(--primary-text);
+    font-family: var(--regular-font);
+    font-size: 1.5rem;
+}
+header ul li:hover{
+    background-color: var(--hover-color);
+}
+
+.bars{
+    display: none;
+}
+.bars span{
+    width: 15px;
+    height: 2px;
+    padding: 1px;
+    margin: 5px;
+    display: block;
+    background-color: var(--hover-color);
+}
+.block{
+    display: block;
+}
+
+/* ***********Section******** */
+section label{
+    text-transform: capitalize;
+}
+::placeholder{
+    text-transform: capitalize;
+    font-family: var(--regular-font);
+    color: gray;
+}
+::placeholder
+label{
+    font-family: var(--main-font);
+}
+input[type='checkbox'].checked{
+    color: green;
+    background-color: #7DCEA0;
+}
+
+
+
+@media only screen and (max-width:768px) {
+    header nav{
+        width: 90%;
+    }
+    header ul{
+        display: none;
+        position: absolute;
+        top: 27px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--bg2-color);
+        height: 100vh;
+        animation-name: navanim;
+        animation-duration: 2s;
+       
+
+    }
+    @keyframes navanim {
+        0% {
+            right: 900px;
+        }
+        100%{
+            
+            right: 0;
+        }
+    }
+    .bars{
+        display: block;
+        cursor: pointer;
+    }
+    /* .bars span:nth-child(2){
+        display: none;
+    }
+    .bars span:nth-child(1){
+       transform: translateX(45deg);
+    }
+    .bars span:nth-child(3){
+        transform:rotatey(45deg)
+    } */
+
+    
+
+}
+
+.test{
+    height: 5000px;
+}
