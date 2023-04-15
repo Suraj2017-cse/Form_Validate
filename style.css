@@ -80,7 +80,9 @@ section label{
     font-family: var(--regular-font);
     color: gray;
 }
-::placeholder
+input{
+    text-transform: capitalize;
+}
 label{
     font-family: var(--main-font);
 }
@@ -138,4 +140,10 @@ input[type='checkbox'].checked{
 
 .test{
     height: 5000px;
+}
+/* .error{
+    border: 1px solid red;
+} */
+.success{
+    border: 1px solid green;
 }
